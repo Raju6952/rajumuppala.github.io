@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muppala Siva Prasad - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #f5f5f5;
+      --bg-dark: #121212;
+      --text-light: #f5f5f5;
+      --text-dark: #121212;
+      --accent: #00bcd4;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    header {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      background-color: #222;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .project-card, .experience-card {
+      background: #1e1e1e;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover, .experience-card:hover {
+      transform: scale(1.03);
+    }
+
+    .get-in-touch {
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .get-in-touch input, .get-in-touch textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .get-in-touch button {
+      padding: 0.75rem 2rem;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-icons a {
+      margin-right: 1rem;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #111;
+      color: #ccc;
+    }
+
+    .dark-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--accent);
+      padding: 0.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dark-toggle" onclick="toggleDarkMode()">
+    <i class="fas fa-moon"></i>
+  </div>
+
+  <header>
+    <h1>Muppala Siva Prasad Raju</h1>
+    <p id="typing-text"></p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>Seasoned Qlik Consultant experienced in Qlik Sense, QlikView, NPrinting, Qlik Cloud, and Tableau.</p>
+  </section>
+
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project-card">Qlik Cloud Monitoring Dashboard</div>
+    <div class="project-card">Incident Alert Automation using Qlik & Slack</div>
+    <div class="project-card">Admin Usage Tracker App</div>
+    <div class="project-card">Qlik Sense SaaS Metrics Overview</div>
+  </section>
+
+  <section id="experience" data-aos="fade-up">
+    <h2>Work Experience</h2>
+    <div class="experience-card">
+      <strong>TEK Systems</strong> (Aug 19, 2024 – Present)<br>
+      Qlik Sense Enterprise & SaaS Platform Administration
+    </div>
+    <div class="experience-card">
+      <strong>Hexagon Physical Security</strong> (Apr 24, 2023 – Aug 16, 2024)<br>
+      Qlik Cloud Migration & Monitoring
+    </div>
+    <div class="experience-card">
+      <strong>Cognizant</strong> (Apr 12, 2021 – Jan 9, 2023)<br>
+      Qlik Dashboard Development & Admin Automation
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Get in Touch</h2>
+    <div class="contact-icons">
+      <a href="mailto:Rajuqlik6952@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+919390424759"><i class="fas fa-phone"></i></a>
+      <a href="https://github.com/Raju6952" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="get-in-touch">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button>Send Message</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Muppala Siva Prasad
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleDarkMode() {
+      const root = document.documentElement;
+      const isDark = root.style.getPropertyValue('--bg-dark') === '#121212';
+      if (isDark) {
+        root.style.setProperty('--bg-dark', '#ffffff');
+        root.style.setProperty('--text-light', '#121212');
+      } else {
+        root.style.setProperty('--bg-dark', '#121212');
+        root.style.setProperty('--text-light', '#f5f5f5');
+      }
+    }
+
+    const roles = ["Seasoned Qlik Consultant", "Qlik Sense Expert", "Tableau Analyst"];
+    let idx = 0;
+    function typingEffect() {
+      const text = roles[idx];
+      let i = 0;
+      const type = () => {
+        if (i < text.length) {
+          document.getElementById("typing-text").innerText = text.slice(0, i + 1);
+          i++;
+          setTimeout(type, 100);
+        } else {
+          setTimeout(() => {
+            idx = (idx + 1) % roles.length;
+            typingEffect();
+          }, 2000);
+        }
+      };
+      type();
+    }
+    typingEffect();
+  </script>
+</body>
+
+</html>
