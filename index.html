@@ -1,234 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muppala Siva Prasad - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raju Muppala Portfolio</title>
   <style>
-    :root {
-      --bg-light: #f5f5f5;
-      --bg-dark: #121212;
-      --text-light: #f5f5f5;
-      --text-dark: #121212;
-      --accent: #00bcd4;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--bg-dark);
-      color: var(--text-light);
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      color: #fff;
     }
 
     header {
-      background: linear-gradient(135deg, #2c3e50, #34495e);
-      padding: 2rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: var(--accent);
-    }
-
-    nav {
       display: flex;
-      justify-content: center;
-      gap: 1rem;
-      background-color: #222;
-      padding: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.3);
     }
 
-    nav a {
-      color: var(--text-light);
-      text-decoration: none;
-      font-weight: 500;
+    .profile-info h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .profile-info p {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+      object-fit: cover;
     }
 
     section {
-      padding: 3rem 1rem;
-      max-width: 1000px;
+      padding: 2rem;
+      max-width: 900px;
       margin: auto;
     }
 
-    .project-card, .experience-card {
-      background: #1e1e1e;
-      padding: 1rem;
-      border-radius: 10px;
-      margin-bottom: 1.5rem;
-      transition: transform 0.3s;
-    }
-
-    .project-card:hover, .experience-card:hover {
-      transform: scale(1.03);
-    }
-
-    .get-in-touch {
-      background: #1a1a1a;
-      padding: 2rem;
-      border-radius: 10px;
-    }
-
-    .get-in-touch input, .get-in-touch textarea {
-      width: 100%;
-      padding: 0.75rem;
+    h2 {
+      border-bottom: 2px solid #fff;
+      padding-bottom: 0.5rem;
       margin-bottom: 1rem;
-      border-radius: 5px;
-      border: none;
     }
 
-    .get-in-touch button {
-      padding: 0.75rem 2rem;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
 
-    .contact-icons a {
-      margin-right: 1rem;
-      font-size: 1.5rem;
-      color: var(--accent);
+    .card h3 {
+      margin-top: 0;
+      color: #ffdc73;
+    }
+
+    a {
+      color: #ffdc73;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: #111;
-      color: #ccc;
+      font-size: 0.9rem;
+      background-color: rgba(0, 0, 0, 0.2);
     }
 
-    .dark-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background: var(--accent);
-      padding: 0.5rem;
-      border-radius: 50%;
-      cursor: pointer;
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .profile-photo {
+        margin-top: 1rem;
+      }
     }
   </style>
 </head>
-
 <body>
-  <div class="dark-toggle" onclick="toggleDarkMode()">
-    <i class="fas fa-moon"></i>
-  </div>
 
+  <!-- Header -->
   <header>
-    <h1>Muppala Siva Prasad Raju</h1>
-    <p id="typing-text"></p>
+    <div class="profile-info">
+      <h1>Raju Muppala</h1>
+      <p>Qlik Sense Admin | Data Enthusiast | Automation Explorer</p>
+      <p>Email: rajuqlik6952@gmail.com | Phone: +91-9390424759</p>
+    </div>
+    <img src="profile.jpg" alt="Raju Muppala" class="profile-photo">
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>Seasoned Qlik Consultant experienced in Qlik Sense, QlikView, NPrinting, Qlik Cloud, and Tableau.</p>
+  <!-- Profile Section -->
+  <section>
+    <h2>Profile Summary</h2>
+    <div class="card">
+      <p>Experienced Qlik Sense Administrator with 6+ years in managing enterprise-level BI environments, dashboard automation, and user access control. Passionate about data-driven decision making and simplifying complex data pipelines.</p>
+    </div>
   </section>
 
-  <section id="projects" data-aos="fade-up">
+  <!-- Employment Section -->
+  <section>
+    <h2>Employment</h2>
+
+    <div class="card">
+      <h3>Senior Qlik Sense Admin – Tek Systems Pvt Ltd</h3>
+      <p><strong>Duration:</strong> 2024 - Present</p>
+      <p>Managing Qlik Cloud, user provisioning, automation with Microsoft Teams & Email integrations, and performance optimization.</p>
+    </div>
+
+    <div class="card">
+      <h3>Qlik Sense Developer – Hexagon Physical Security</h3>
+      <p><strong>Duration:</strong> 2023 - 2024</p>
+      <p>Built enterprise dashboards, data models, and enabled insights using scripting and set analysis. Handled incremental loads and section access.</p>
+    </div>
+<div class="card">
+      <h3>Qlik Sense Admin – Cognizant </h3>
+      <p><strong>Duration:</strong> 2021 - 2023</p>
+      <p>Built enterprise dashboards, data models, and enabled insights using scripting and set analysis. Handled incremental loads and section access.</p>
+    </div>
+
+
+  </section>
+
+  <!-- Projects Section -->
+  <section>
     <h2>Projects</h2>
-    <div class="project-card">Qlik Cloud Monitoring Dashboard</div>
-    <div class="project-card">Incident Alert Automation using Qlik & Slack</div>
-    <div class="project-card">Admin Usage Tracker App</div>
-    <div class="project-card">Qlik Sense SaaS Metrics Overview</div>
+
+    <div class="card">
+      <h3>Qlik Automation - S3 File Sync</h3>
+      <p>Automated daily data backups to AWS S3 using Qlik Cloud Automations and REST APIs for data governance.</p>
+    </div>
+
+    <div class="card">
+      <h3>Cloud Status Monitor</h3>
+      <p>Built a monitoring dashboard using REST connection to Qlik Cloud Status Page and triggered alerts via Teams.</p>
+    </div>
+
+    <div class="card">
+      <h3>Operator Performance KPI Dashboard</h3>
+      <p>Designed a KPI-driven dashboard to track operator productivity and incident resolution trends.</p>
+    </div>
+
   </section>
 
-  <section id="experience" data-aos="fade-up">
-    <h2>Work Experience</h2>
-    <div class="experience-card">
-      <strong>TEK Systems</strong> (Aug 19, 2024 – Present)<br>
-      Qlik Sense Enterprise & SaaS Platform Administration
-    </div>
-    <div class="experience-card">
-      <strong>Hexagon Physical Security</strong> (Apr 24, 2023 – Aug 16, 2024)<br>
-      Qlik Cloud Migration & Monitoring
-    </div>
-    <div class="experience-card">
-      <strong>Cognizant</strong> (Apr 12, 2021 – Jan 9, 2023)<br>
-      Qlik Dashboard Development & Admin Automation
-    </div>
-  </section>
-
-  <section id="contact" data-aos="fade-up">
-    <h2>Get in Touch</h2>
-    <div class="contact-icons">
-      <a href="mailto:Rajuqlik6952@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="tel:+919390424759"><i class="fas fa-phone"></i></a>
-      <a href="https://github.com/Raju6952" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="get-in-touch">
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea rows="4" placeholder="Your Message"></textarea>
-      <button>Send Message</button>
-    </div>
-  </section>
-
+  <!-- Footer -->
   <footer>
-    © 2025 Muppala Siva Prasad
+    &copy; 2025 Raju Muppala — Designed with 💙 by Raju
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-
-    function toggleDarkMode() {
-      const root = document.documentElement;
-      const isDark = root.style.getPropertyValue('--bg-dark') === '#121212';
-      if (isDark) {
-        root.style.setProperty('--bg-dark', '#ffffff');
-        root.style.setProperty('--text-light', '#121212');
-      } else {
-        root.style.setProperty('--bg-dark', '#121212');
-        root.style.setProperty('--text-light', '#f5f5f5');
-      }
-    }
-
-    const roles = ["Seasoned Qlik Consultant", "Qlik Sense Expert", "Tableau Analyst"];
-    let idx = 0;
-    function typingEffect() {
-      const text = roles[idx];
-      let i = 0;
-      const type = () => {
-        if (i < text.length) {
-          document.getElementById("typing-text").innerText = text.slice(0, i + 1);
-          i++;
-          setTimeout(type, 100);
-        } else {
-          setTimeout(() => {
-            idx = (idx + 1) % roles.length;
-            typingEffect();
-          }, 2000);
-        }
-      };
-      type();
-    }
-    typingEffect();
-  </script>
 </body>
-
 </html>
